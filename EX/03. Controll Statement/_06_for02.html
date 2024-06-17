@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단</title>
+</head>
+<body>
+    <script>
+        const gugudan = document.getElementsByClassName("gugudan");
+
+        for(let i = 2; i < 9; i++) {
+            document.write(`<h1>${i}단</h1>`);
+            for(let j = 1; j<= 9; j++) {
+                // document.write(`<p>${i} * ${j} = ${(i) * j}</p>`);
+                // document.write(`${i} * ${j} = ${i * j}<br>`);
+                document.write(`${i} * ${j} = ${i * j}`,"<br>");
+            }            
+        }
+    </script>
+</body>
+</html>
