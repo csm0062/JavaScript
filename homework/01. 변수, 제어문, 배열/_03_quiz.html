@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz03</title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>짝수일까, 홀수일까</h2>
+    <script>
+        const num = prompt("숫자를 입력하세요.");
+        const result = num % 2 == 0 ? `짝수` : `홀수` ;
+        document.write(`<p>${num}는 ${result}입니다.</p>`);
+    </script>
+</body>
+</html>
