@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>귀요운 절미</title>
+    <style>
+        body {
+            background: -webkit-radial-gradient(circle, red, orange, yellow, green, blue, navy, purple);
+            background: -moz-radial-gradient(circle, red, orange, yellow, green, blue, navy, purple);
+            background: -o-radial-gradient(circle, red, orange, yellow, green, blue, navy, purple);
+            background: radial-gradient(circle, red, orange, yellow, green, blue, navy, purple);
+        }
+        #btn {
+            background-color: rgba(0, 0, 0, 0.1);
+            color: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            position: absolute;
+        }
+        .pic {
+            width: 200px;
+            height: 200px;
+            background-image: url(절미.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="btn">^0^</button>
+    <div class="pic" style="background-image: url(절미.jpg);"></div>
+    <div class="pic" style="background-image: url(절미1.jpg);"></div>
+    <div class="pic" style="background-image: url(절미2.jpg);"></div>
+    <div class="pic" style="background-image: url(절미3.jpg);"></div>
+    <div class="pic" style="background-image: url(절미4.jpg);"></div>
+    <div class="pic" style="background-image: url(절미5.jpg);"></div>
+    <div class="pic" style="background-image: url(절미6.jpg);"></div>
+    <div class="pic" style="background-image: url(절미.jpg);"></div>
+    <div class="pic" style="background-image: url(절미1.jpg);"></div>
+    <div class="pic" style="background-image: url(절미2.jpg);"></div>
+    <div class="pic" style="background-image: url(절미3.jpg);"></div>
+    <div class="pic" style="background-image: url(절미4.jpg);"></div>
+    <div class="pic" style="background-image: url(절미5.jpg);"></div>
+    <div class="pic" style="background-image: url(절미6.jpg);"></div>
+    <div class="pic" style="background-image: url(절미.jpg);"></div>
+    <div class="pic" style="background-image: url(절미1.jpg);"></div>
+    <div class="pic" style="background-image: url(절미2.jpg);"></div>
+    <div class="pic" style="background-image: url(절미3.jpg);"></div>
+    <div class="pic" style="background-image: url(절미4.jpg);"></div>
+    <div class="pic" style="background-image: url(절미5.jpg);"></div>
+    <div class="pic" style="background-image: url(절미6.jpg);"></div>
+
+    <div class="pic"></div>
+    <!-- <div style="width: 1800px; height: 800px; background-color: white;"></div> -->
+    <script>
+        const btn = document.getElementById("btn");
+        // 버튼 위치 설정
+        let left = Math.round(Math.random() * 1800);
+        let num =  Math.round(Math.random() * 800);
+        btn.style.left = `${left}px`;
+        btn.style.top = `${num}px`;
+
+        let interval = setInterval(() => {
+
+            let pictures = document.getElementsByClassName("pic");
+            for (p of pictures) {
+                left = Math.round(Math.random() * 1800);
+                num =  Math.round(Math.random() * 800);
+                p.style.left = `${left}px`;
+                p.style.top = `${num}px`;
+            }
+        }, 1500);
+
+        btn.addEventListener("click", () => {
+            if(interval != null && typeof interval != undefined){
+                clearInterval(interval);
+            }
+        });
+    </script>
